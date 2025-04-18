@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Tailwind - Página Única</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-black">
+    <nav class="bg-gray-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <P class="text-white">MI SITIO</P>
+                            <a href="#ejercicio1" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Botón</a>
+                            <a href="#ejercicio2" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Tarjeta</a>
+                            <a href="#ejercicio3" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Layout</a>
+                            <a href="#ejercicio4" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Formulario</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-warning-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" onclick="toggleMenu()">
+                        <span class="sr-only">Color</span>
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#ejercicio1" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Botón</a>
+                <a href="#ejercicio2" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Tarjeta</a>
+                <a href="#ejercicio3" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Layout</a>
+                <a href="#ejercicio4" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Formulario</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <section id="ejercicio1" class="mb-12">
+            <h2></h2>
+            <div class="flex justify-center">
+                <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-yellow-300">
+                    Color
+                </button>
+            </div>
+        </section>
+
+        <section id="ejercicio2" class="mb-12">
+            <h2 class="text-2xl text-white font-bold mb-4"> Usuario</h2>
+            <div class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+                <img class="w-full h-40 object-cover" src="04-large.jpg" alt="Imagen de usuario">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold">Mikaela Chavez</h3>
+                    <p class="text-gray-600">Estudiante del "Instituto Jesus Maria", cursando el segundo año de sistemas </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ejercicio3" class="mb-12">
+            <h2 class="text-2xl text-white font-bold mb-4">Layout</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-gray-200 p-4 rounded">
+                    <h2>Titulo 1</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex recusandae numquam dolor, voluptatum debitis libero laborum dolore magni veniam mollitia quos molestiae explicabo atque, quis eligendi. Dolores cupiditate sint sunt.</p>
+                </div>
+                <div class="bg-gray-200 p-4 rounded">
+                    <h2>Titulo 2</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex recusandae numquam dolor, voluptatum debitis libero laborum dolore magni veniam mollitia quos molestiae explicabo atque, quis eligendi. Dolores cupiditate sint sunt.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ejercicio4" class="mb-12">
+            <h2 class="text-2xl text-white font-bold mb-4">Formulario</h2>
+            <form class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-bold mb-2" for="nombre">Nombre</label>
+                    <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" id="nombre" placeholder="Tu nombre">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-bold mb-2" for="email">Correo</label>
+                    <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="email" id="email" placeholder="Tu correo">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-bold mb-2" for="mensaje">Mensaje</label>
+                    <textarea class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" id="mensaje" rows="4" placeholder="Tu mensaje"></textarea>
+                </div>
+                <button class="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded " type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
